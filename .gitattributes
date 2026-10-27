@@ -1,0 +1,7 @@
+# Fine riga LF ovunque, coerente con Prettier e con le build su Linux (Netlify/Vercel)
+* text=auto eol=lf
+
+*.webp binary
+*.png binary
+*.jpg binary
+*.svg text eol=lf

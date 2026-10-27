@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'DM Serif Display', ui-serif, Georgia, serif;
+
+  /* Palette. Contrasti WCAG verificati:
+     forest su ivory 9.06 · forest su sage-light 7.58 · ivory su forest 9.06.
+     sage e terracotta non superano 4.5:1 sui fondi chiari: solo uso decorativo.
+     terracotta-dark (terracotta scurita) è la variante per piccoli testi d'accento:
+     6.08 su ivory, 5.09 su sage-light. */
+  --color-ivory: #f8f6f0;
+  --color-sage-light: #dde5d8;
+  --color-sage: #8a9a83;
+  --color-forest: #35483d;
+  --color-terracotta: #c58f78;
+  --color-terracotta-dark: #765648;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ivory font-sans text-forest antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
